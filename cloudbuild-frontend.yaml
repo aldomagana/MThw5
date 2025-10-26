@@ -11,12 +11,12 @@ steps:
   - name: 'gcr.io/cloud-builders/gcloud'
     args:
       [
-        'run', 'deploy', 'recipe-backend',
+        'run', 'deploy', 'recipe-frontend',
         '--image', 'gcr.io/$PROJECT_ID/recipe-frontend',
         '--platform', 'managed',
         '--region', 'us-central1',
         '--allow-unauthenticated',
-        '--port', '80'
+        '--port', '8080'
       ]
 
 options:
