@@ -1,5 +1,5 @@
 steps:
-  # Build the frontend Docker image
+  # Build the backend Docker image
   - name: 'gcr.io/cloud-builders/docker'
     args: ['build', '-t', 'gcr.io/$PROJECT_ID/recipe-frontend', './frontend']
 
@@ -16,7 +16,7 @@ steps:
         '--platform', 'managed',
         '--region', 'us-central1',
         '--allow-unauthenticated',
-        '--port', '8080'
+        '--port', '80'
       ]
 
 options:
